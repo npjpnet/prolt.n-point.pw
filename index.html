@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <!-- Encode Setting -->
     <meta charset="UTF-8">
+
+    <!-- SEO Settings -->
+    <meta name="description" content="不定期で開催しているIT勉強会イベント「プログラミングLT」のWebサイトです。" />
+    <meta property="og:description" content="不定期で開催しているIT勉強会イベント「プログラミングLT」のWebサイトです。" />
+    <meta property="og:title" content="Top" />
+    <meta property="og;site_name" content="プログラミングLT" />
+    <meta property="og:image" content="img/ogimage.png" />
     <title>プログラミングLT</title>
+
+    <!-- Adobe Fonts -->
+    <script>
+        (function(d) {
+            var config = {
+                    kitId: 'gpo1mqt',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+
+    </script>
+
+    <!-- Style Settings -->
+    <meta http-equiv="X-UA-Compatible" content=IE=edge" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script>
+        $(document).ready(function() {
+            $(".firsttitle").fadeIn(1000);
+        });
+    </script>
 </head>
 <body>
-    <h1>ページ準備中</h1>
-    <hr />
-    <p>公開までしばらくお待ちください。</p>
+    <div class="background"></div>
+    <div class="firsttitle">
+        <h3>世界を変える(変わる)コードがここにある</h3>
+        <img src="img/logo.png" width="50%" height="auto">
+        <h3>2019年4月30日<br> 東京・日本橋茅場町 FinGATE KAYABA</h3>
+        <a href="https://npoint.connpass.com/event/118783/" class="button">Connpassで参加登録する</a>
+    </div>
 </body>
 </html>
