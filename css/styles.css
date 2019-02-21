@@ -1,43 +1,53 @@
-.background {
-    position: fixed;
+body {
+    position: absolute;
     width: 100%;
-    height: 100%;
     background-image: url("../img/background.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-}
-
-.firsttitle {
-    display: none;
-    position: fixed;
-    top: 20%;
-    left: 0%;
-    width: 100%;
-    height: 60%;
-    text-align: center;
+    font-family: a-otf-ud-shin-go-pr6n, sans-serif;
+    font-weight: 600;
     color: white;
-    font-family: kozuka-gothic-pro, sans-serif;
-    font-weight: 900;
-    font-style: normal;
 }
 
-.firsttitle .button {
-    transition: 0.5s;
-    background: none;
-    padding-left: 1em;
-    padding-right: 1em;
+.topbodycontent {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 30%;
+    left: 0%;
+    text-align: center;
+}
+
+.topbodycontent .button {
+    transition: 1s;
+    width: auto;
+    height: auto;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    border: 0.5px white solid;
-    font-size: large;
+    padding-left: 1em;
+    padding-right: 1em;
     text-decoration: none;
     color: white;
+    border: 1px solid white;
+    border-radius: 20px;
 }
 
-.firsttitle .button:hover {
-    transition: 0.5s;
-    border-radius: 30px;
+.topbodycontent .button:hover {
     background: white;
     color: black;
+    transition: 0.5s;
+    width: 100%;
+    font-size: large;
+}
+
+@media screen and (max-width: 480px) {
+    .topbodycontent {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 20%;
+        left: 0%;
+        text-align: center;
+    }
 }
