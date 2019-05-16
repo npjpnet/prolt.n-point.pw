@@ -68,9 +68,43 @@
 
 </head>
 <body>
-    <center>
-        <h2>イベント次期開催に向けサイト準備中</h2>
-        <hr />
-        <p>お楽しみに！</p>
-    </center>
+    <nav class="amber accent-4">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="http://prolt.n-point.pw" class="brand-logo">PROLT</a>
+                <a href="#" data-target="mobilemenu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="about/">開催概要</a></li>
+                    <li><a href="about/access">会場アクセス</a></li>
+                    <li><a href="presenter/">登壇者</a></li>
+                    <li><a href="donate/">懇親会・寄付</a></li>
+                    <li><a href="https://twitter.com/_prolt/"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://discord.gg/jvMNTsD"><i class="fab fa-discord"></i></a></li>
+                    <li><a href="https://npoint.connpass.com/event/118783/" class="btn">参加申し込み</a></li>
+                </ul>
+                <ul class="sidenav" id="mobilemenu">
+                    <li><a href="https://npoint.connpass.com/event/118783/" class="btn">参加申し込み</a></li>
+                    <li><a href="about/">開催概要</a></li>
+                    <li><a href="about/access">会場アクセス</a></li>
+                    <li><a href="presenter/">登壇者</a></li>
+                    <li><a href="donate/">懇親会・寄付</a></li>
+                    <li><a href="https://twitter.com/_prolt">Twitterアカウント</a></li>
+                    <li><a href="https://discord.gg/jvMNTsD">Discordサーバー</a></li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $('.sidenav').sidenav();
+            });
+        </script>
+    </nav>
+    <div class="topbodycontent">
+        <h1>プログラミングLT</h1>
+        <h5>2019/4/30</h5>
+        <h5>東京・日本橋茅場町 FinGATE KAYABA</h5>
+        <br />
+        <a href="https://npoint.connpass.com/event/118783/" class="button">Connpassで参加登録する</a>
+    </div>
 </body>
+</html>
