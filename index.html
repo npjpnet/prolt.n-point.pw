@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <!-- Encode Setting -->
     <meta charset="UTF-8">
@@ -20,12 +21,12 @@
     <title>プログラミングLT</title>
 
     <!-- Microsoft Windows10 Tile Settings -->
-    <meta name="application-name" content="プログラミングLT"/>
-    <meta name="msapplication-square70x70logo" content="http://prolt.n-point.pw/img/win10tile/small.jpg"/>
-    <meta name="msapplication-square150x150logo" content="http://prolt.n-point.pw/img/win10tile/medium.jpg"/>
-    <meta name="msapplication-wide310x150logo" content="http://prolt.n-point.pw/img/win10tile/wide.jpg"/>
-    <meta name="msapplication-square310x310logo" content="http://prolt.n-point.pw/img/win10tile/large.jpg"/>
-    <meta name="msapplication-TileColor" content="#ffc000"/>
+    <meta name="application-name" content="プログラミングLT" />
+    <meta name="msapplication-square70x70logo" content="http://prolt.n-point.pw/img/win10tile/small.jpg" />
+    <meta name="msapplication-square150x150logo" content="http://prolt.n-point.pw/img/win10tile/medium.jpg" />
+    <meta name="msapplication-wide310x150logo" content="http://prolt.n-point.pw/img/win10tile/wide.jpg" />
+    <meta name="msapplication-square310x310logo" content="http://prolt.n-point.pw/img/win10tile/large.jpg" />
+    <meta name="msapplication-TileColor" content="#ffc000" />
 
     <!-- favicon -->
     <link rel="icon" type="image/png" href="http://prolt.n-point.pw/img/favicon.png">
@@ -38,12 +39,32 @@
                     scriptTimeout: 3000,
                     async: true
                 },
-                h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+                h = d.documentElement,
+                t = setTimeout(function() {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function() {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {}
+            };
+            s.parentNode.insertBefore(tk, s)
         })(document);
     </script>
 
     <!-- Style Settings -->
-    <meta http-equiv="X-UA-Compatible" content=IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content=IE=edge />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -60,17 +81,54 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129691136-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-129691136-2');
     </script>
 
 </head>
+
 <body>
-    <center>
-        <h2>イベント次期開催に向けサイト準備中</h2>
-        <hr />
-        <p>お楽しみに！</p>
-    </center>
+    <nav class="amber accent-4">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="http://prolt.n-point.pw" class="brand-logo">PROLT</a>
+                <a href="#" data-target="mobilemenu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="about/">開催概要</a></li>
+                    <li><a href="about/access">会場アクセス</a></li>
+                    <li><a href="donate/">懇親会・寄付</a></li>
+                    <li><a href="https://twitter.com/_prolt/"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://discord.gg/jvMNTsD"><i class="fab fa-discord"></i></a></li>
+                    <li><a href="https://npoint.connpass.com/event/130984/" class="btn">参加申し込み</a></li>
+                </ul>
+                <ul class="sidenav" id="mobilemenu">
+                    <li><a href="https://npoint.connpass.com/event/130984/" class="btn">参加申し込み</a></li>
+                    <li><a href="about/">開催概要</a></li>
+                    <li><a href="about/access">会場アクセス</a></li>
+                    <li><a href="donate/">懇親会・寄付</a></li>
+                    <li><a href="https://twitter.com/_prolt">Twitterアカウント</a></li>
+                    <li><a href="https://discord.gg/jvMNTsD">Discordサーバー</a></li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('.sidenav').sidenav();
+            });
+        </script>
+    </nav>
+    <div class="topbodycontent">
+        <h1>プログラミングLT2019 Summer</h1>
+        <h5>2019/8/24(SAT)</h5>
+        <h5>東京・日本橋茅場町 FinGATE KAYABA</h5>
+        <br />
+        <a href="https://npoint.connpass.com/event/130984/" class="button">Connpassで参加登録する</a>
+    </div>
 </body>
+
+</html>

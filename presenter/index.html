@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <!-- Encode Setting -->
     <meta charset="UTF-8">
@@ -20,12 +21,12 @@
     <title>登壇者 - プログラミングLT</title>
 
     <!-- Microsoft Windows10 Tile Settings -->
-    <meta name="application-name" content="プログラミングLT"/>
-    <meta name="msapplication-square70x70logo" content="http://prolt.n-point.pw/img/win10tile/small.jpg"/>
-    <meta name="msapplication-square150x150logo" content="http://prolt.n-point.pw/img/win10tile/medium.jpg"/>
-    <meta name="msapplication-wide310x150logo" content="http://prolt.n-point.pw/img/win10tile/wide.jpg"/>
-    <meta name="msapplication-square310x310logo" content="http://prolt.n-point.pw/img/win10tile/large.jpg"/>
-    <meta name="msapplication-TileColor" content="#ffc000"/>
+    <meta name="application-name" content="プログラミングLT" />
+    <meta name="msapplication-square70x70logo" content="http://prolt.n-point.pw/img/win10tile/small.jpg" />
+    <meta name="msapplication-square150x150logo" content="http://prolt.n-point.pw/img/win10tile/medium.jpg" />
+    <meta name="msapplication-wide310x150logo" content="http://prolt.n-point.pw/img/win10tile/wide.jpg" />
+    <meta name="msapplication-square310x310logo" content="http://prolt.n-point.pw/img/win10tile/large.jpg" />
+    <meta name="msapplication-TileColor" content="#ffc000" />
 
     <!-- favicon -->
     <link rel="icon" type="image/png" href="http://prolt.n-point.pw/img/favicon.png">
@@ -38,12 +39,32 @@
                     scriptTimeout: 3000,
                     async: true
                 },
-                h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+                h = d.documentElement,
+                t = setTimeout(function() {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function() {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {}
+            };
+            s.parentNode.insertBefore(tk, s)
         })(document);
     </script>
 
     <!-- Style Settings -->
-    <meta http-equiv="X-UA-Compatible" content=IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content=IE=edge />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -55,314 +76,80 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129691136-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-129691136-2');
     </script>
 
 </head>
+
 <body>
-<nav class="amber accent-4">
+    <nav class="amber accent-4">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="http://prolt.n-point.pw" class="brand-logo">PROLT</a>
+                <a href="#" data-target="mobilemenu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="../about/">開催概要</a></li>
+                    <li><a href="../about/access">会場アクセス</a></li>
+                    <li><a href="../presenter/">登壇者</a></li>
+                    <li><a href="../donate/">懇親会・寄付</a></li>
+                    <li><a href="https://twitter.com/_prolt/"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://discord.gg/jvMNTsD"><i class="fab fa-discord"></i></a></li>
+                    <li><a href="https://npoint.connpass.com/event/118783/" class="btn">参加申し込み</a></li>
+                </ul>
+                <ul class="sidenav" id="mobilemenu">
+                    <li><a href="https://npoint.connpass.com/event/118783/" class="btn">参加申し込み</a></li>
+                    <li><a href="../about/">開催概要</a></li>
+                    <li><a href="../about/access">会場アクセス</a></li>
+                    <li><a href="../presenter/">登壇者</a></li>
+                    <li><a href="../donate/">懇親会・寄付</a></li>
+                    <li><a href="https://twitter.com/_prolt">Twitterアカウント</a></li>
+                    <li><a href="https://discord.gg/jvMNTsD">Discordサーバー</a></li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('.sidenav').sidenav();
+            });
+        </script>
+    </nav>
     <div class="container">
-        <div class="nav-wrapper">
-            <a href="http://prolt.n-point.pw" class="brand-logo">PROLT</a>
-            <a href="#" data-target="mobilemenu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="../about/">開催概要</a></li>
-                <li><a href="../about/access">会場アクセス</a></li>
-                <li><a href="../presenter/">登壇者</a></li>
-                <li><a href="../donate/">懇親会・寄付</a></li>
-                <li><a href="https://twitter.com/_prolt/"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://discord.gg/jvMNTsD"><i class="fab fa-discord"></i></a></li>
-                <li><a href="https://npoint.connpass.com/event/118783/" class="btn">参加申し込み</a></li>
-            </ul>
-            <ul class="sidenav" id="mobilemenu">
-                <li><a href="https://npoint.connpass.com/event/118783/" class="btn">参加申し込み</a></li>
-                <li><a href="../about/">開催概要</a></li>
-                <li><a href="../about/access">会場アクセス</a></li>
-                <li><a href="../presenter/">登壇者</a></li>
-                <li><a href="../donate/">懇親会・寄付</a></li>
-                <li><a href="https://twitter.com/_prolt">Twitterアカウント</a></li>
-                <li><a href="https://discord.gg/jvMNTsD">Discordサーバー</a></li>
-            </ul>
+        <div class="row">
+            <div class="col s12">
+                <h3>登壇者(発表順)</h3>
+                <p>発表順に登壇者を紹介しております。<br>登壇者の皆様は、その部が始まるまでには会場で受付を済ませるようにしてください。</p>
+                <hr />
+            </div>
         </div>
+        <div class="row">
+            <div class="col s12 m3">
+                <div align="center">
+                    <img src="https://pbs.twimg.com/profile_images/1049722475917979648/QfBeL_g7_400x400.jpg" width="200px" height="200px" style="border-radius: 100px;">
+                </div>
+            </div>
+            <div class="col s12 m9">
+                <div align="center">
+                    <h4>NAME</h4>
+                    <h5>TITLE</h5>
+                    <p>午前5分枠(0)<br>00:00 ～ 00:00 AMA00</p>
+                    <a href="https://twitter.com/TWITTERID/" style="color: white; text-decoration: none;"><i class="fab fa-twitter fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr /><br>
     </div>
-    <script>
-        $(document).ready(function(){
-            $('.sidenav').sidenav();
-        });
-    </script>
-</nav>
-<div class="container">
-    <div class="row">
-        <div class="col s12">
-            <h3>登壇者(発表順)</h3>
-            <p>発表順に登壇者を紹介しております。<br>登壇者の皆様は、その部が始まるまでには会場で受付を済ませるようにしてください。</p>
-            <hr />
-        </div>
+    <br><br>
+    <br><br>
+    <hr />
+    <div align="center">
+        Copyright 2019 プログラミングLT
     </div>
-    <div class="row">
-        <div class="col s12 m3">
-            <div align="center">
-                <img src="https://pbs.twimg.com/profile_images/1049722475917979648/QfBeL_g7_400x400.jpg" width="200px" height="200px" style="border-radius: 100px;">
-            </div>
-        </div>
-        <div class="col s12 m9">
-            <div align="center">
-                <h4>主犯(なああよ)</h4>
-                <h5>プログラミングLTってなんぞ</h5>
-                <p>午前5分枠(1)<br>10:10 ～ 10:15 AMA01</p>
-                <a href="https://twitter.com/shuhannn/" style="color: white; text-decoration: none;"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
-        </div>
-    </div>
-    <hr /><br>
-    <div class="row">
-        <div class="col s12 m3">
-            <div align="center">
-                <img src="https://pbs.twimg.com/profile_images/1113393979263819776/5t_ejJsI_400x400.png" width="200px" height="200px" style="border-radius: 100px;">
-            </div>
-        </div>
-        <div class="col s12 m9">
-            <div align="center">
-                <h4>すとまと</h4>
-                <h5>人工生命とは</h5>
-                <p>午前5分枠(2)<br>10:20 ～ 10:25 AMA02</p>
-                <a href="https://twitter.com/stmtk_01" style="color: white; text-decoration: none;"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
-        </div>
-    </div>
-    <hr /><br>
-    <div class="row">
-        <div class="col s12 m3">
-            <div align="center">
-                <img src="https://pbs.twimg.com/profile_images/1077841426292006912/TiYdVlha_400x400.jpg" width="200px" height="200px" style="border-radius: 100px;">
-            </div>
-        </div>
-        <div class="col s12 m9">
-            <div align="center">
-                <h4>Kotomi1338</h4>
-                <h5>クリッカーアプリ</h5>
-                <p>午前5分枠(3)<br>10:30 ～ 10:35 AMA03</p>
-                <a href="https://twitter.com/Kotomi1338" style="color: white; text-decoration: none;"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
-        </div>
-    </div>
-    <hr /><br>
-    <div class="row">
-        <div class="col s12 m3">
-            <div align="center">
-                <img src="https://pbs.twimg.com/profile_images/1051316003328520193/RqL1u1ZO_400x400.jpg" width="200px" height="200px" style="border-radius: 100px;">
-            </div>
-        </div>
-        <div class="col s12 m9">
-            <div align="center">
-                <h4>mktakuya</h4>
-                <h5>プログラミングと一人暮らし</h5>
-                <p>午前10分枠(1)<br>10:40 ～ 10:50 AMB01</p>
-                <a href="https://twitter.com/mktakuya" style="color: white; text-decoration: none;"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
-        </div>
-    </div>
-    <hr /><br>
-    <div class="row">
-        <div class="col s12 m3">
-            <div align="center">
-                <img src="https://pbs.twimg.com/profile_images/604953609843802112/2CTc9oLo_400x400.png" width="200px" height="200px" style="border-radius: 100px;">
-            </div>
-        </div>
-        <div class="col s12 m9">
-            <div align="center">
-                <h4>おしょー</h4>
-                <h5>Ruby にコミットしよう（仮）</h5>
-                <p>午前5分枠(4)<br>11:10 ～ 11:15 AMA04</p>
-                <a href="https://twitter.com/ping_bandbi" style="color: white; text-decoration: none;"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
-        </div>
-    </div>
-    <hr /><br>
-    <div class="row">
-        <div class="col s12 m3">
-            <div align="center">
-                <img src="https://pbs.twimg.com/profile_images/1114864687328387073/kW8jXi5l_400x400.jpg" width="200px" height="200px" style="border-radius: 100px;">
-            </div>
-        </div>
-        <div class="col s12 m9">
-            <div align="center">
-                <h4>pencilya</h4>
-                <h5>Minecraftとこれからのプログラミング</h5>
-                <p>午前リモート5分枠(4)<br>11:20 ～ 11:25 AMRA01</p>
-                <a href="https://twitter.com/pencilya_" style="color: white; text-decoration: none;"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
-        </div>
-    </div>
-    <hr /><br>
-    <div class="row">
-        <div class="col s12 m3">
-            <div align="center">
-                <img src="https://pbs.twimg.com/profile_images/604953609843802112/2CTc9oLo_400x400.png" width="200px" height="200px" style="border-radius: 100px;">
-            </div>
-        </div>
-        <div class="col s12 m9">
-            <div align="center">
-                <h4>sakamoto</h4>
-                <h5>Pythonのデバッガpdbについて</h5>
-                <p>午前5分枠(5)<br>11:30 ～ 11:35 AMA05</p>
-                <a href="https://twitter.com/Skeinin" style="color: white; text-decoration: none;"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
-        </div>
-    </div>
-    <hr /><br>
-    <div class="row">
-        <div class="col s12 m3">
-            <div align="center">
-                <img src="https://pbs.twimg.com/profile_images/1102510974676873216/3tViX_ek_400x400.jpg" width="200px" height="200px" style="border-radius: 100px;">
-            </div>
-        </div>
-        <div class="col s12 m9">
-            <div align="center">
-                <h4>yuki384</h4>
-                <h5>ポートフォリオサイトをJekyllで作ってみた</h5>
-                <p>午前5分枠(6)<br>11:40 ～ 11:45 AMA06</p>
-                <a href="https://twitter.com/yuki384love" style="color: white; text-decoration: none;"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
-        </div>
-    </div>
-    <hr /><br>
-    <div class="row">
-        <div class="col s12 m3">
-            <div align="center">
-                <img src="https://pbs.twimg.com/profile_images/1110682330329280512/msm-nNpV_400x400.png" width="200px" height="200px" style="border-radius: 100px;">
-            </div>
-        </div>
-        <div class="col s12 m9">
-            <div align="center">
-                <h4>シュプレ</h4>
-                <h5>Firebase Authenticationでソッコーで認証</h5>
-                <p>午後5分枠(1)<br>12:50 ～ 12:55 PMA01</p>
-                <a href="https://twitter.com/spre55" style="color: white; text-decoration: none;"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
-        </div>
-    </div>
-    <hr /><br>
-    <div class="row">
-        <div class="col s12 m3">
-            <div align="center">
-                <img src="https://pbs.twimg.com/profile_images/937353805686906880/mCL6j05L_400x400.jpg" width="200px" height="200px" style="border-radius: 100px;">
-            </div>
-        </div>
-        <div class="col s12 m9">
-            <div align="center">
-                <h4>Cj-bc</h4>
-                <h5>mcUI --- 3D shell environment(仮)</h5>
-                <p>午後5分枠(2)<br>13:00 ～ 13:05 PMA02</p>
-                <a href="https://twitter.com/Cj_bc_sd" style="color: white; text-decoration: none;"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
-        </div>
-    </div>
-    <hr /><br>
-    <div class="row">
-        <div class="col s12 m3">
-            <div align="center">
-                <img src="../img/preview1.png" width="200px" height="200px" style="border-radius: 100px;">
-            </div>
-        </div>
-        <div class="col s12 m9">
-            <div align="center">
-                <h4></h4>
-                <h5>登壇者募集中！</h5>
-                <p>午後5分枠(3)<br>13:10 ～ 13:15 PMA03</p>
-                <a href="#" style="color: white; text-decoration: none;"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
-        </div>
-    </div>
-    <hr /><br>
-    <div class="row">
-        <div class="col s12 m3">
-            <div align="center">
-                <img src="https://pbs.twimg.com/profile_images/870825268419493892/nSppG3yJ_400x400.jpg" width="200px" height="200px" style="border-radius: 100px;">
-            </div>
-        </div>
-        <div class="col s12 m9">
-            <div align="center">
-                <h4>hotuta</h4>
-                <h5>Googleマイマップを強引に自動更新する技術と物語</h5>
-                <p>午後10分枠(1)<br>13:20 ～ 13:30 PMB01</p>
-                <a href="https://twitter.com/hotu_ta" style="color: white; text-decoration: none;"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
-        </div>
-    </div>
-    <hr /><br>
-    <div class="row">
-        <div class="col s12 m3">
-            <div align="center">
-                <img src="https://pbs.twimg.com/profile_images/1091998843636408320/ee2JBQI1_400x400.jpg" width="200px" height="200px" style="border-radius: 100px;">
-            </div>
-        </div>
-        <div class="col s12 m9">
-            <div align="center">
-                <h4>ゴリラ</h4>
-                <h5>OSS活動は良いぞ</h5>
-                <p>午後10分枠(2)<br>13:35 ～ 13:45 PMB02</p>
-                <a href="https://twitter.com/gorilla0513" style="color: white; text-decoration: none;"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
-        </div>
-    </div>
-    <hr /><br>
-    <div class="row">
-        <div class="col s12 m3">
-            <div align="center">
-                <img src="https://pbs.twimg.com/profile_images/699270099497136129/QsKT7m0o_400x400.png" width="200px" height="200px" style="border-radius: 100px;">
-            </div>
-        </div>
-        <div class="col s12 m9">
-            <div align="center">
-                <h4>高見知英</h4>
-                <h5>Re:VIEWのプレビューツールを作った話</h5>
-                <p>午後10分枠(3)<br>14:15 ～ 14:25 PMB03</p>
-                <a href="https://twitter.com/TakamiChie" style="color: white; text-decoration: none;"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
-        </div>
-    </div>
-    <hr /><br>
-    <div class="row">
-        <div class="col s12 m3">
-            <div align="center">
-                <img src="https://pbs.twimg.com/profile_images/713647711115997184/k67sLpz-_400x400.jpg" width="200px" height="200px" style="border-radius: 100px;">
-            </div>
-        </div>
-        <div class="col s12 m9">
-            <div align="center">
-                <h4>yu-ya4</h4>
-                <h5>(仮)はじめての情報推薦</h5>
-                <p>午後10分枠(3)<br>14:30 ～ 14:40 PMB04</p>
-                <a href="https://twitter.com/yu__ya4" style="color: white; text-decoration: none;"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
-        </div>
-    </div>
-    <hr /><br>
-    <div class="row">
-        <div class="col s12 m3">
-            <div align="center">
-                <img src="https://pbs.twimg.com/profile_images/796716956585902081/ml1P8jqU_400x400.jpg" width="200px" height="200px" style="border-radius: 100px;">
-            </div>
-        </div>
-        <div class="col s12 m9">
-            <div align="center">
-                <h4>waricoma</h4>
-                <h5>IoT device and Server side programming by JavaScript.</h5>
-                <p>午後 リモート10分枠<br>14:35～14:50 PMRB01</p>
-                <a href="https://twitter.com/waritocomatta" style="color: white; text-decoration: none;"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
-<br><br>
-<br><br>
-<hr />
-<div align="center">
-    Copyright 2019 プログラミングLT
-</div>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <!-- Encode Setting -->
     <meta charset="UTF-8">
@@ -19,12 +20,12 @@
     <meta name="twitter:image" content="http://prolt.n-point.pw/img/ogimage.png" />
 
     <!-- Microsoft Windows10 Tile Settings -->
-    <meta name="application-name" content="プログラミングLT"/>
-    <meta name="msapplication-square70x70logo" content="http://prolt.n-point.pw/img/win10tile/small.jpg"/>
-    <meta name="msapplication-square150x150logo" content="http://prolt.n-point.pw/img/win10tile/medium.jpg"/>
-    <meta name="msapplication-wide310x150logo" content="http://prolt.n-point.pw/img/win10tile/wide.jpg"/>
-    <meta name="msapplication-square310x310logo" content="http://prolt.n-point.pw/img/win10tile/large.jpg"/>
-    <meta name="msapplication-TileColor" content="#ffc000"/>
+    <meta name="application-name" content="プログラミングLT" />
+    <meta name="msapplication-square70x70logo" content="http://prolt.n-point.pw/img/win10tile/small.jpg" />
+    <meta name="msapplication-square150x150logo" content="http://prolt.n-point.pw/img/win10tile/medium.jpg" />
+    <meta name="msapplication-wide310x150logo" content="http://prolt.n-point.pw/img/win10tile/wide.jpg" />
+    <meta name="msapplication-square310x310logo" content="http://prolt.n-point.pw/img/win10tile/large.jpg" />
+    <meta name="msapplication-TileColor" content="#ffc000" />
 
     <!-- favicon -->
     <link rel="icon" type="image/png" href="http://prolt.n-point.pw/img/favicon.png">
@@ -39,12 +40,32 @@
                     scriptTimeout: 3000,
                     async: true
                 },
-                h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+                h = d.documentElement,
+                t = setTimeout(function() {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function() {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {}
+            };
+            s.parentNode.insertBefore(tk, s)
         })(document);
     </script>
 
     <!-- Style Settings -->
-    <meta http-equiv="X-UA-Compatible" content=IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content=IE=edge />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -56,93 +77,94 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129691136-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-129691136-2');
     </script>
 
 </head>
+
 <body>
-<nav class="amber accent-4">
-    <div class="container">
-        <div class="nav-wrapper">
-            <a href="http://prolt.n-point.pw" class="brand-logo">PROLT</a>
-            <a href="#" data-target="mobilemenu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="../about/">開催概要</a></li>
-                <li><a href="../about/access">会場アクセス</a></li>
-                <li><a href="../presenter/">登壇者</a></li>
-                <li><a href="../donate/">懇親会・寄付</a></li>
-                <li><a href="https://twitter.com/_prolt/"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://discord.gg/jvMNTsD"><i class="fab fa-discord"></i></a></li>
-                <li><a href="https://npoint.connpass.com/event/118783/" class="btn">参加申し込み</a></li>
-            </ul>
-            <ul class="sidenav" id="mobilemenu">
-                <li><a href="https://npoint.connpass.com/event/118783/" class="btn">参加申し込み</a></li>
-                <li><a href="../about/">開催概要</a></li>
-                <li><a href="../about/access">会場アクセス</a></li>
-                <li><a href="../presenter/">登壇者</a></li>
-                <li><a href="../donate/">懇親会・寄付</a></li>
-                <li><a href="https://twitter.com/_prolt">Twitterアカウント</a></li>
-                <li><a href="https://discord.gg/jvMNTsD">Discordサーバー</a></li>
-            </ul>
+    <nav class="amber accent-4">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="http://prolt.n-point.pw" class="brand-logo">PROLT</a>
+                <a href="#" data-target="mobilemenu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="../about/">開催概要</a></li>
+                    <li><a href="../about/access">会場アクセス</a></li>
+                    <li><a href="../donate/">懇親会・寄付</a></li>
+                    <li><a href="https://twitter.com/_prolt/"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://discord.gg/jvMNTsD"><i class="fab fa-discord"></i></a></li>
+                    <li><a href="https://npoint.connpass.com/event/118783/" class="btn">参加申し込み</a></li>
+                </ul>
+                <ul class="sidenav" id="mobilemenu">
+                    <li><a href="https://npoint.connpass.com/event/118783/" class="btn">参加申し込み</a></li>
+                    <li><a href="../about/">開催概要</a></li>
+                    <li><a href="../about/access">会場アクセス</a></li>
+                    <li><a href="../donate/">懇親会・寄付</a></li>
+                    <li><a href="https://twitter.com/_prolt">Twitterアカウント</a></li>
+                    <li><a href="https://discord.gg/jvMNTsD">Discordサーバー</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <script>
-        $(document).ready(function(){
-            $('.sidenav').sidenav();
-        });
-    </script>
-</nav>
-<div class="container">
-    <div class="row">
-        <div class="col s12">
-            <h3>懇親会</h3>
-            <hr />
-            <p>
+        <script>
+            $(document).ready(function() {
+                $('.sidenav').sidenav();
+            });
+        </script>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h3>懇親会</h3>
+                <hr />
                 イベント終了後、懇親会がございます。<br>
                 ドリンクと軽食を傍らにイベントの参加者の皆様と交流が可能です。<br>
                 参加費は「700円」を予定しております。当日お支払いいただきます。<br>
                 当日現地では、
                 <ul>
-                    <li>現金</li>
-                    <li>Pring(詳しくはオンライン寄付の欄を御覧ください)</li>
-                    <li>Visa/MasterCard/AMEXのクレジット・デビット・プリペイド決済</li>
+                    <li>・現金</li>
+                    <li>・Pring(詳しくはオンライン寄付の欄を御覧ください)</li>
+                    <li>・JCB/Visa/MasterCard/AMEXのクレジット・デビット・プリペイド決済</li>
                 </ul>
                 がご利用可能です。
-            </p>
-            <h3>オンライン寄付</h3>
-            <hr />
-            <p>
-                プログラミングLTの開催・継続運営のため、寄付を募っております。<br>
-                寄付は、送金アプリ「<a href="https://www.pring.jp" style="text-decoration: none; color: #ffb300;">Pring(プリン)</a>」で受け付けております。<br>
-                <a href="https://itunes.apple.com/jp/app/プリン-pring-送受金アプリ/id1295628648?mt=8" style="text-decoration: none; color: #ffb300;">App Store</a>または<a href="play.google.com/store/apps/details?id=jp.pring&hl=ja" style="text-decoration: none; color: #ffb300;">Google Play Store</a>からPringアプリをダウンロードし、<br>
-                会員・銀行口座登録の上、「ID: npoint」に送金してください。<br>
-                1円からでも送金できる上、チャージ・送金・引き出し手数料が全て無料です。<br>
-                割り勘などにも便利で、チャージしたお金を再び口座に引き出すことが可能ですので、一種の貯金箱としても利用できます。<br>
-                <h5>Pring QRコード</h5>
-                <img src="../img/pring.PNG" width="200px" height="200px">
-            </p>
-            <h3>当日寄付</h3>
-            <hr />
-            <p>
-                当日の寄付は、
-                <ul>
-                    <li>現金</li>
-                    <li>Pring</li>
-                    <li>Visa/MasterCarf/AMEXのクレジット・デビット・プリペイド決済</li>
-                </ul>
-                で受け付けます。
-                領収証が必要な方は、寄付時にお申し出ください。
-            </p>
+
+                <h3>オンライン寄付</h3>
+                <hr />
+                <p>プログラミングLTの開催・継続運営のため、寄付を募っております。<br>
+                    寄付は、送金アプリ「<a href="https://www.pring.jp" style="text-decoration: none; color: #ffb300;">Pring(プリン)</a>」で受け付けております。<br>
+                    <a href="https://itunes.apple.com/jp/app/プリン-pring-送受金アプリ/id1295628648?mt=8" style="text-decoration: none; color: #ffb300;">App Store</a>または<a href="play.google.com/store/apps/details?id=jp.pring&hl=ja" style="text-decoration: none; color: #ffb300;">Google Play Store</a>からPringアプリをダウンロードし、<br>
+                    会員・銀行口座登録の上、「ID: npoint」に送金してください。<br>
+                    1円からでも送金できる上、チャージ・送金・引き出し手数料が全て無料です。<br>
+                    割り勘などにも便利で、チャージしたお金を再び口座に引き出すことが可能ですので、一種の貯金箱としても利用できます。<br>
+                    <h5>Pring QRコード</h5>
+                    <img src="../img/pring.PNG" width="200px" height="200px">
+
+                    <h3>当日寄付</h3>
+                    <hr />
+                    <p>
+                        当日の寄付は、
+                        <ul>
+                            <li>・現金</li>
+                            <li>・Pring</li>
+                            <li>・JCB/Visa/MasterCarf/AMEXのクレジット・デビット・プリペイド決済</li>
+                        </ul>
+                        で受け付けます。
+                        領収証が必要な方は、寄付時にお申し出ください。
+
+            </div>
         </div>
     </div>
-</div>
-<br><br>
-<hr />
-<div align="center">
-    Copyright 2019 プログラミングLT
-</div>
+    <br><br>
+    <hr />
+    <div align="center">
+        Copyright 2019 プログラミングLT
+    </div>
 </body>
+
 </html>
