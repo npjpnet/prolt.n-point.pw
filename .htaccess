@@ -1,6 +1,6 @@
 RewriteEngine on
 RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://prolt.n-point.pw [R=301,L]
+RewriteRule ^(.*)$ https://prolt.n-point.pw/$1 [R=301,L]
 <Files ~ "^\.ht">
 deny from all
 </Files>
