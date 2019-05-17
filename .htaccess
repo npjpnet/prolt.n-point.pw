@@ -1,7 +1,7 @@
 RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://prolt.n-point.pw/$1 [R=301,L]
 <Files ~ "^\.ht">
 deny from all
 </Files>
-RewriteCond %{HTTPS} off
 ErrorDocument 404 /404.html
-RewriteRule ^(.*)$ https://prolt.n-point.pw/$1 [R=301,L]
