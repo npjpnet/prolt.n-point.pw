@@ -3,11 +3,18 @@ RewriteEngine on
 deny from all
 </Files>
 RewriteCond %{HTTPS} off
+RewriteCond %{REQUEST_URI} !(^(.*)\.gif$)
+RewriteCond %{REQUEST_URI} !(^(.*)\.jpg$)
+RewriteCond %{REQUEST_URI} !(^(.*)\.css$)
+RewriteCond %{REQUEST_URI} !(^(.*)\.png$)
+RewriteCond %{REQUEST_URI} !(^(.*)\.js$)
 # ErrorDocument 410 /error/410.html
 ErrorDocument 404 /404.html
 # ErrorDocument 403 /error/403.html
 # ErrorDocument 400 /error/400.html
 # ErrorDocument 401 /error/401.html
 RewriteRule ^(.*)$ https://http://prolt.n-point.pw//$1 [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 # RewriteRule ^teapod.html$ https://site-ne.cloud/error/418.html [R=302,L]
 # RewriteRule ^ex/myfes_countdown/(.*)$ https://site-ne.cloud/error/maintenance.html [R=302,L]
