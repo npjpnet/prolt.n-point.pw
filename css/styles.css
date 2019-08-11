@@ -1,3 +1,11 @@
+@font-face {
+    font-family: minmoji;
+    src: url('https://minmoji.ucda.jp/fontseot/https%3A__prolt.n-point.pw_');
+    src: local('minmoji'),
+    url('https://minmoji.ucda.jp/fontswoff/https%3A__prolt.n-point.pw_') format('woff'),
+    url('https://minmoji.ucda.jp/fonts/https%3A__prolt.n-point.pw_') format('opentype');
+}
+
 body {
     position: absolute;
     width: 100%;
@@ -5,9 +13,9 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    font-family: a-otf-ud-shin-go-pr6n, sans-serif;
-    font-weight: 300;
-    color: white;
+    font-family: minmoji, sans-serif;
+    /* font-weight: 300;
+    color: white; */
 }
 
 .topbodycontent {
